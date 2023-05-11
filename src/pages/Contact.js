@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 // import images
-import WomanImg from '../img/contact/woman.png';
+import RaphaelImg from '../img/contact/Raphael.png';
 // import motion
 import { motion } from 'framer-motion';
 // import transition
@@ -71,7 +71,7 @@ const Contact = () => {
             transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
-            <img src={WomanImg} alt='' />
+            <img src={RaphaelImg} alt='' />
           </motion.div>
         </div>
       </div>
