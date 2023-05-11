@@ -49,7 +49,7 @@ const About = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Recusandae, iure! Ullam, dolore? Eligendi, quam mollitia.
             </p>
-            <Link to={'/portfolio'} className='btn'>
+            <Link to={'/'} className='btn'>
               View my work
             </Link>
           </motion.div>

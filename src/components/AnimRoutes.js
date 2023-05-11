@@ -1,6 +1,5 @@
 import React from 'react';
 // import pages
-import Home from '../pages/Home';
 import About from '../pages/About';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
@@ -14,9 +13,8 @@ const AnimRoutes = () => {
   return (
     <AnimatePresence initial={true} mode='wait'>
       <Routes key={location.pathname} location={location}>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Portfolio />} />
         <Route path='/about' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </AnimatePresence>

@@ -25,11 +25,6 @@ const Socials = () => {
           </a>
         </li>
         <li>
-          <a href='http://www.twitter.com' target='_blank'>
-            <ImTwitter />
-          </a>
-        </li>
-        <li>
           <a href='http://www.pinterest.com' target='_blank'>
             <ImPinterest />
           </a>
@@ -37,11 +32,6 @@ const Socials = () => {
         <li>
           <a href='http://www.instagram.com' target='_blank'>
             <ImInstagram />
-          </a>
-        </li>
-        <li>
-          <a href='http://www.youtube.com' target='_blank'>
-            <ImYoutube />
           </a>
         </li>
       </ul>

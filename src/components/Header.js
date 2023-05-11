@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 // import components
 import Socials from './Socials';
 import Logo from '../img/header/logo.svg';
+import LogoImg from '../img/header/logo.png'
 import MobileNav from './MobileNav';
 // import link
 import { Link } from 'react-router-dom';
@@ -12,16 +13,16 @@ const Header = () => {
   const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   return (
-    <header className='fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center'>
+    <header className='fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[90px] flex items-center bg-white opacity-90' >
       <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
         {/* logo */}
         <Link
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaveHandler}
           to={'/'}
-          className='max-w-[200px]'
+          className='max-w-[300px]'
         >
-          <img src={Logo} alt='' />
+          <img src={LogoImg} alt='' />
         </Link>
         {/* nav - initially hidden - show on desktop mode */}
         <nav
@@ -33,7 +34,7 @@ const Header = () => {
             to={'/'}
             className='text-[#696c6d] hover:text-primary transition'
           >
-            Home
+            Porftolio
           </Link>
           <Link
             to={'/about'}
@@ -42,17 +43,17 @@ const Header = () => {
             About
           </Link>
           <Link
-            to={'/portfolio'}
-            className='text-[#696c6d] hover:text-primary transition'
-          >
-            Porftolio
-          </Link>
-          <Link
             to={'/contact'}
             className='text-[#696c6d] hover:text-primary transition'
           >
             Contact
           </Link>
+          <a
+            href="https://google.com"
+            className='text-[#696c6d] hover:text-primary transition'
+          >
+            Blog
+          </a>
         </nav>
       </div>
       {/* socials */}
