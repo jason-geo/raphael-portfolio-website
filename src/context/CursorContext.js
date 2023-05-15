@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect, createContext } from "react";
 
 // create context
 export const CursorContext = createContext();
@@ -10,7 +10,7 @@ const CursorProvider = ({ children }) => {
     y: 0,
   });
   // cursor bg state
-  const [cursorBG, setCursorBG] = useState('default');
+  const [cursorBG, setCursorBG] = useState("default");
 
   const mobileViewportIsActive = window.innerWidth < 768;
 
@@ -22,13 +22,13 @@ const CursorProvider = ({ children }) => {
           y: e.clientY,
         });
       };
-      window.addEventListener('mousemove', move);
+      window.addEventListener("mousemove", move);
       // remove event
       return () => {
-        window.removeEventListener('mousemove', move);
+        window.removeEventListener("mousemove", move);
       };
     } else {
-      setCursorBG('none');
+      setCursorBG("none");
     }
   });
 
@@ -37,35 +37,53 @@ const CursorProvider = ({ children }) => {
     default: {
       x: cursorPos.x - 16,
       y: cursorPos.y - 16,
-      backgroundColor: '#0e1112',
+      backgroundColor: "#0e1112",
     },
     text: {
-      width: '150px',
-      height: '150px',
+      width: "150px",
+      height: "150px",
       x: cursorPos.x - 72,
       y: cursorPos.y - 72,
-      backgroundColor: '#fff',
-      mixBlendMode: 'difference',
+      backgroundColor: "#fff",
+      mixBlendMode: "difference",
+    },
+    image: {
+      width: "150px",
+      height: "150px",
+      x: cursorPos.x - 72,
+      y: cursorPos.y - 72,
+      backgroundColor: "#fff",
+      mixBlendMode: "saturation",
     },
     none: {
       width: 0,
       height: 0,
-      backgroundColor: 'rgba(255,255,255, 1)',
+      backgroundColor: "rgba(255,255,255, 1)",
     },
   };
 
-  // mouse enter handler
-  const mouseEnterHandler = () => {
-    setCursorBG('text');
+  // mouse enter text handler
+  const mouseEnterTextHandler = () => {
+    setCursorBG("text");
+  };
+  // mouse enter image handler
+  const mouseEnterImageHandler = () => {
+    setCursorBG("image");
   };
   // mouse leaver handler
   const mouseLeaveHandler = () => {
-    setCursorBG('default');
+    setCursorBG("default");
   };
 
   return (
     <CursorContext.Provider
-      value={{ cursorVariants, cursorBG, mouseEnterHandler, mouseLeaveHandler }}
+      value={{
+        cursorVariants,
+        cursorBG,
+        mouseEnterTextHandler,
+        mouseEnterImageHandler,
+        mouseLeaveHandler,
+      }}
     >
       {children}
     </CursorContext.Provider>

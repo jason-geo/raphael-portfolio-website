@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 // import components
 import Socials from './Socials';
-import Logo from '../img/header/logo.svg';
 import LogoImg from '../img/header/logo.png'
 import MobileNav from './MobileNav';
 // import link
@@ -10,24 +9,24 @@ import { Link } from 'react-router-dom';
 import { CursorContext } from '../context/CursorContext';
 
 const Header = () => {
-  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+  const { mouseEnterTextHandler, mouseLeaveHandler } = useContext(CursorContext);
 
   return (
     <header className='fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[90px] flex items-center bg-white opacity-90' >
       <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
         {/* logo */}
         <Link
-          onMouseEnter={mouseEnterHandler}
+          onMouseEnter={mouseEnterTextHandler}
           onMouseLeave={mouseLeaveHandler}
           to={'/'}
-          className='max-w-[300px]'
+        className='lg:max-w-[300px] max-w-[250px]'
         >
           <img src={LogoImg} alt='' />
         </Link>
         {/* nav - initially hidden - show on desktop mode */}
         <nav
           className='hidden xl:flex gap-x-12 font-semibold'
-          onMouseEnter={mouseEnterHandler}
+          onMouseEnter={mouseEnterTextHandler}
           onMouseLeave={mouseLeaveHandler}
         >
           <Link
@@ -57,7 +56,7 @@ const Header = () => {
         </nav>
       </div>
       {/* socials */}
-      <Socials />
+      <Socials marginLeft={'ml-24'}/>
       {/* mobile nav */}
       <MobileNav />
     </header>
