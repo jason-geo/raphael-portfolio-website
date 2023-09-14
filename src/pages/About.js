@@ -43,14 +43,19 @@ const About = () => {
             onMouseLeave={mouseLeaveHandler}
           >
             <h1 className="h1">About me</h1>
-            <p className="mb-12 max-w-sm">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              <b> Exercitationem, veritatis.</b> Veritatis illum aut,
-              reprehenderit sed dolorem dolore.
+            <p className="mb-12 max-w-sm px-10">
+              Raphael Koutoulogenis is a photographer specializing in portrait,
+              fashion, and real estate photography. With a keen eye for
+              capturing the essence of his subjects and an impeccable attention
+              to detail, Raphael's work reflects his passion for visual
+              storytelling. <br />
               <br />
-              <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Recusandae, iure! Ullam, dolore? Eligendi, quam mollitia.
+              Residing in the picturesque island of Zakynthos, Greece, Raphael
+              draws inspiration from the breathtaking natural surroundings that
+              serve as his backdrop. His portfolio showcases a diverse range of
+              captivating images that transport viewers to extraordinary moments
+              and evoke a sense of wonder. Explore Raphael's exceptional work
+              and let his photography tell your unique story.
             </p>
             <Link to={"/"} className="btn">
               View my work

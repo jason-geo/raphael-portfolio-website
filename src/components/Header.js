@@ -47,12 +47,6 @@ const Header = () => {
           >
             Contact
           </Link>
-          <a
-            href="https://google.com"
-            className='text-[#696c6d] hover:text-primary transition'
-          >
-            Blog
-          </a>
         </nav>
       </div>
       {/* socials */}

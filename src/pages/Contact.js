@@ -82,7 +82,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
-          {/* image */}
+
           <motion.div
             onMouseEnter={mouseEnterImageHandler}
             onMouseLeave={mouseLeaveHandler}
@@ -92,7 +92,7 @@ const Contact = () => {
             transition={{ transition: transition1, duration: 1.5 }}
             className='lg:flex-1'
           >
-            <img src={RaphaelImg} alt='' />
+            <img src={RaphaelImg} alt=''/>
           </motion.div>
         </div>
       </div>
