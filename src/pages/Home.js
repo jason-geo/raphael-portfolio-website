@@ -24,8 +24,6 @@ const Home = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  console.log(media);
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
